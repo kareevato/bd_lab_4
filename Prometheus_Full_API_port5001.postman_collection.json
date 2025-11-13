@@ -1,0 +1,909 @@
+{
+  "info": {
+    "name": "Prometheus Full API (port 5001)",
+    "_postman_id": "c3d8b9b0-5001-11ee-b5d7-0242ac120002",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Roles",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/roles/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"student\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/roles/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/roles/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"student\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/roles/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/roles/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/users/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"full_name\": \"Test User\",\n  \"email\": \"test@example.com\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/users/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/users/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"full_name\": \"Test User\",\n  \"email\": \"test@example.com\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/users/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/users/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "User_roles",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/user_roles/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": 1,\n  \"role_id\": 1\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/user_roles/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/user_roles/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": 1,\n  \"role_id\": 1\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/user_roles/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/user_roles/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Courses",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/courses/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"New Course\",\n  \"description\": \"Example description\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/courses/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/courses/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"New Course\",\n  \"description\": \"Example description\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/courses/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/courses/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Course_instructors",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/course_instructors/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"course_id\": 1,\n  \"user_id\": 1\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/course_instructors/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/course_instructors/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"course_id\": 1,\n  \"user_id\": 1\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/course_instructors/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/course_instructors/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modules",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/modules/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"course_id\": 1,\n  \"title\": \"Intro Module\",\n  \"description\": \"Module description\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/modules/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/modules/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"course_id\": 1,\n  \"title\": \"Intro Module\",\n  \"description\": \"Module description\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/modules/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/modules/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lessons",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/lessons/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"module_id\": 1,\n  \"title\": \"Lesson 1\",\n  \"content\": \"Lesson content\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/lessons/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/lessons/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"module_id\": 1,\n  \"title\": \"Lesson 1\",\n  \"content\": \"Lesson content\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/lessons/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/lessons/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enrollments",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/enrollments/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": 1,\n  \"course_id\": 1\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/enrollments/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/enrollments/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": 1,\n  \"course_id\": 1\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/enrollments/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/enrollments/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tests",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/tests/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"course_id\": 1,\n  \"title\": \"Test 1\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/tests/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/tests/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"course_id\": 1,\n  \"title\": \"Test 1\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/tests/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/tests/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Questions",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/questions/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"test_id\": 1,\n  \"text\": \"Sample question?\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/questions/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/questions/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"test_id\": 1,\n  \"text\": \"Sample question?\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/questions/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/questions/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Options",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/options/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question_id\": 1,\n  \"text\": \"Option A\",\n  \"is_correct\": true\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/options/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/options/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question_id\": 1,\n  \"text\": \"Option A\",\n  \"is_correct\": true\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/options/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/options/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Test_attempts",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/test_attempts/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": 1,\n  \"test_id\": 1,\n  \"score\": 90.0\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/test_attempts/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/test_attempts/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": 1,\n  \"test_id\": 1,\n  \"score\": 90.0\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/test_attempts/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/test_attempts/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Test_attempt_answers",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/test_attempt_answers/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"attempt_id\": 1,\n  \"question_id\": 1,\n  \"selected_option_id\": 1,\n  \"is_correct\": true\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/test_attempt_answers/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/test_attempt_answers/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"attempt_id\": 1,\n  \"question_id\": 1,\n  \"selected_option_id\": 1,\n  \"is_correct\": true\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/test_attempt_answers/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/test_attempt_answers/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Progress",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/progress/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": 1,\n  \"lesson_id\": 1,\n  \"status\": \"completed\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/progress/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/progress/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": 1,\n  \"lesson_id\": 1,\n  \"status\": \"completed\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/progress/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/progress/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Notifications",
+      "item": [
+        {
+          "name": "GET all",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/notifications/"
+          }
+        },
+        {
+          "name": "POST create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": 1,\n  \"message\": \"Hello!\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/notifications/"
+          }
+        },
+        {
+          "name": "GET by id (1)",
+          "request": {
+            "method": "GET",
+            "url": "http://127.0.0.1:5001/api/notifications/1"
+          }
+        },
+        {
+          "name": "PUT update (1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": 1,\n  \"message\": \"Hello!\"\n}"
+            },
+            "url": "http://127.0.0.1:5001/api/notifications/1"
+          }
+        },
+        {
+          "name": "DELETE (1)",
+          "request": {
+            "method": "DELETE",
+            "url": "http://127.0.0.1:5001/api/notifications/1"
+          }
+        }
+      ]
+    }
+  ]
+}
